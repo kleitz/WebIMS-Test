@@ -1,0 +1,64 @@
+
+
+Web Incident Management System
+
+This is to help Amateur Radio Operators assist local agency's in the event of failure of normal communications. 
+I will support backup emergency communications, manage Incidents, assist in Shelter Operations. 
+Incident Management Shelter Management Maps Document's
+
+It will not log or record sheltered, persons other than just simple number of persons. Adults, Children, LEO, EMS, Pets.
+
+It will be web based to run on WAMP, LAMP servers. On Raspberry Pi, over Broadband Hamnet (BBHN) MESH NETWORK.
+It has been tested on Raspberry Pi 3 Configured with BBHN-Pi, with Apache2, Mysql, PHP.
+
+This application do not intend to be a professional one.
+But, if you agree with the open source license, 
+you can use for your work with no problem. 
+Consider keeping the credits to me!
+
+This application has only been tested locally, in my own machine.
+Tested with Xampp in Windows and Ubuntu Linux.
+
+
+HOW TO INSTALL
+==============================
+
+1. Create a Database with the file 'webims.sql';
+2. Upload this application to your web folder;
+3. Change the URL for this system in '/includes/config.php'
+
+    /* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'webims-1');
+
+4. Ready, try accessing 'http://your-url/WebIMS'
+
+PASSWORDS:
+User: admin, pass: admin
+User: user, pass: user
+
+
+CONTACT
+=======
+
+N7WWK Bob elder
+www.n7wwk.com
+
+
+
+CHANGELOG
+=========
+
+Version 1.0:
+    - First working!
+
+TODO:
+
+Configure Maps from online Google Maps to local mapping with out internet connection.
+
+
+
+
