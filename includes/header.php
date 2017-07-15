@@ -51,8 +51,8 @@ body {margin:0;}
     
 <div id="wrapper">
     
-    <h1><font color ="green"> Web Incident Management System</h1>        
-                <p>Ham Radio Backup Emergency Communications </p></font>
+    <h1><font color ="green"> Web Incident Management System</h1>       
+    <p><h4>Ham Radio Backup Emergency Communications </h4></p></font>
         
         <p align="right"><a href="logout.php" class="btn btn-danger">LogOut</a></p>
 
@@ -61,9 +61,6 @@ body {margin:0;}
 
   
 </div>
-
-
-
 </body>
 </html>
 

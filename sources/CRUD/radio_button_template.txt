@@ -1,0 +1,11 @@
+<div class="form-group" class="radio">
+			<label for="input1" class="col-sm-2 control-label">Gender</label>
+			<div class="col-sm-10">
+			  <label>
+			    <input type="radio" name="gender" id="optionsRadios1" value="male" checked> Male
+			  </label>
+			  	  <label>
+			    <input type="radio" name="gender" id="optionsRadios1" value="female"> Female
+			  </label>
+			</div>
+			</div>

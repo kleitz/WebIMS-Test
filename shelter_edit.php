@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Shelter Status</title>
+	<title>status</title>
 <style type="text/css">
 	hr.pme-hr		     { border: 0px solid; padding: 0px; margin: 0px; border-top-width: 1px; height: 1px; }
-	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 80%; }
-	table.pme-navigation { border: #004d9c 0px solid; border-collapse: collapse; border-spacing: 0px; width: 80%; }
+	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 100%; }
+	table.pme-navigation { border: #004d9c 0px solid; border-collapse: collapse; border-spacing: 0px; width: 100%; }
 	td.pme-navigation-0, td.pme-navigation-1 { white-space: nowrap; }
 	th.pme-header	     { border: #004d9c 1px solid; padding: 4px; background: #add8e6; }
 	td.pme-key-0, td.pme-value-0, td.pme-help-0, td.pme-navigation-0, td.pme-cell-0,
@@ -43,17 +43,17 @@
 $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
 $opts['pw'] = '';
-$opts['db'] = 'ims';
-$opts['tb'] = 'shelter';
+$opts['db'] = 'webims-1';
+$opts['tb'] = 'status';
 
 // Name of field which is the unique key
-$opts['key'] = 'sheltered';
+$opts['key'] = 'id';
 
 // Type of key field (int/real/string/date etc.)
-$opts['key_type'] = 'string';
+$opts['key_type'] = 'int';
 
 // Sorting field(s)
-$opts['sort_field'] = array('sheltered');
+$opts['sort_field'] = array('id');
 
 // Number of records to display on the screen
 // Value of -1 lists all records in a table
@@ -139,10 +139,10 @@ appear in generated list. Here are some most used field options documented.
   descriptions fields are also possible. Check documentation for this.
 */
 
-$opts['fdd']['tactical'] = array(
-  'name'     => 'Tactical',
+$opts['fdd']['id'] = array(
+  'name'     => 'ID',
   'select'   => 'T',
-  'maxlen'   => 50,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['name'] = array(
@@ -151,52 +151,47 @@ $opts['fdd']['name'] = array(
   'maxlen'   => 100,
   'sort'     => true
 );
-$opts['fdd']['type'] = array(
-  'name'     => 'Type',
-  'select'   => 'T',
-  'maxlen'   => 25,
-  'sort'     => true
-);
 $opts['fdd']['status'] = array(
   'name'     => 'Status',
   'select'   => 'T',
-  'maxlen'   => 20,
+  'maxlen'   => 50,
   'sort'     => true
 );
 $opts['fdd']['adult'] = array(
   'name'     => 'Adult',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['children'] = array(
   'name'     => 'Children',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['leo'] = array(
   'name'     => 'Leo',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['ems'] = array(
   'name'     => 'Ems',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 10,
   'sort'     => true
 );
 $opts['fdd']['pets'] = array(
   'name'     => 'Pets',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 10,
   'sort'     => true
 );
-$opts['fdd']['sheltered'] = array(
-  'name'     => 'Sheltered',
+$opts['fdd']['date'] = array(
+  'name'     => 'Date',
   'select'   => 'T',
-  'maxlen'   => 4,
+  'maxlen'   => 19,
+  'default'  => '0000-00-00 00:00:00',
   'sort'     => true
 );
 
@@ -209,3 +204,4 @@ new phpMyEdit($opts);
 <?php include("includes/footer.php");?>
 </body>
 </html>
+

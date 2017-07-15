@@ -9,17 +9,17 @@
 <li><a href='welcome.php'>Home</a></li>
 <li><a href='#'>Shelters</a>
 	<ul>
-            <li><a href='shelter.php'>Shelter Manager</a></li>
-            <li>  </li>
-	<li></li>
+            <li><a href='shelter_view.php'>Shelter Status</a></li>
+            <li> <a href='shelter_add.php'>Shelter Update</a> </li>
+            <li><a href='shelter_edit.php'>Edit Shelter's</a></li>
 	<li></li>
 	</ul>
 </li>
 <li><a href='#'>Incidents</a>
 	<ul>
 	<li><a href='incident.php'>Incident Manager</a></li>
-        <li><a href='dispach.php'>Available Resources</a></li>
-	<li><a href='dispached.php'>Dispached Resources</a></li>
+        <li><a href='resources.php'>Available Resources</a></li>
+	<li><a href='#'>Dispached Resources</a></li>
 	
 	</ul>
 </li>
@@ -40,8 +40,8 @@
 <li><a href='#'>Settings</a>
 	<ul>
 	<li><a href='#'>System Edit </a></li>
-	<li><a href='users.php'>User Manager</a></li>
-        <li><a href='../../sources/index.php'>Test Page</a></li>
+	<li><a href='register.php'>Add User</a></li>
+        <li><a href='users.php'>View Users</a></li>
 	</ul>
 </li>
 </ul>

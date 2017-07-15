@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>View Users</title>
+	<title>status</title>
 <style type="text/css">
 	hr.pme-hr		     { border: 0px solid; padding: 0px; margin: 0px; border-top-width: 1px; height: 1px; }
 	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 100%; }
@@ -19,8 +19,7 @@
 </style>
 </head>
 <body>
-    <?php include("includes/header.php");?>
-<h3>View Users</h3>
+<h3>status</h3>
 <?php
 
 /*
@@ -44,7 +43,7 @@ $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
 $opts['pw'] = '';
 $opts['db'] = 'webims-1';
-$opts['tb'] = 'users';
+$opts['tb'] = 'status';
 
 // Name of field which is the unique key
 $opts['key'] = 'id';
@@ -62,7 +61,7 @@ $opts['inc'] = 15;
 // Options you wish to give the users
 // A - add,  C - change, P - copy, V - view, D - delete,
 // F - filter, I - initial sort suppressed
-$opts['options'] = 'VDF';
+$opts['options'] = 'ACPVDF';
 
 // Number of lines to display on multiple selection filters
 $opts['multiple'] = '4';
@@ -142,19 +141,58 @@ appear in generated list. Here are some most used field options documented.
 $opts['fdd']['id'] = array(
   'name'     => 'ID',
   'select'   => 'T',
-  'options'  => 'AVCPDR', // auto increment
-  'maxlen'   => 11,
-  'default'  => '0',
+  'maxlen'   => 10,
   'sort'     => true
 );
-$opts['fdd']['username'] = array(
-  'name'     => 'Username',
+$opts['fdd']['name'] = array(
+  'name'     => 'Name',
+  'select'   => 'T',
+  'maxlen'   => 100,
+  'sort'     => true
+);
+$opts['fdd']['status'] = array(
+  'name'     => 'Status',
   'select'   => 'T',
   'maxlen'   => 50,
   'sort'     => true
 );
-
-
+$opts['fdd']['adult'] = array(
+  'name'     => 'Adult',
+  'select'   => 'T',
+  'maxlen'   => 10,
+  'sort'     => true
+);
+$opts['fdd']['children'] = array(
+  'name'     => 'Children',
+  'select'   => 'T',
+  'maxlen'   => 10,
+  'sort'     => true
+);
+$opts['fdd']['leo'] = array(
+  'name'     => 'Leo',
+  'select'   => 'T',
+  'maxlen'   => 10,
+  'sort'     => true
+);
+$opts['fdd']['ems'] = array(
+  'name'     => 'Ems',
+  'select'   => 'T',
+  'maxlen'   => 10,
+  'sort'     => true
+);
+$opts['fdd']['pets'] = array(
+  'name'     => 'Pets',
+  'select'   => 'T',
+  'maxlen'   => 10,
+  'sort'     => true
+);
+$opts['fdd']['date'] = array(
+  'name'     => 'Date',
+  'select'   => 'T',
+  'maxlen'   => 19,
+  'default'  => '0000-00-00 00:00:00',
+  'sort'     => true
+);
 
 // Now important call to phpMyEdit
 require_once 'phpMyEdit.class.php';
@@ -162,6 +200,6 @@ new phpMyEdit($opts);
 
 ?>
 
-<?php include("includes/footer.php");?>
+
 </body>
 </html>
