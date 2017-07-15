@@ -1,10 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-		"http://www.w3.org/TR/html4/loose.dtd">
+<?php 
+include('includes/header.php');
+//include('includes/nav.php');
+?>
+
+<!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Incident Management</title>
-<style type="text/css">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
 	hr.pme-hr		     { border: 0px solid; padding: 0px; margin: 0px; border-top-width: 1px; height: 1px; }
 	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 80%; }
 	table.pme-navigation { border: #004d9c 0px solid; border-collapse: collapse; border-spacing: 0px; width: 80%; }
@@ -17,10 +20,25 @@
 	td.pme-message { text-align: center; }
 	td.pme-stats   { text-align: right;  }
 </style>
-</head>
-<body>
-    <?php include("includes/header.php");?>
-<h3>Incident Management</h3>
+    </head> 
+    <body>
+        <div id="green">
+            <h4> <font color=blue>Action Menu</h4></font>
+            <input type="submit" value="New Incident" name="New Incident" />
+            <input type="submit" value="Resources" /><a href="resources.php"/></a><br>
+            <input type="submit" value="Dispach"/> <a href="dispached.php"/></a><br>
+		
+		</table>	
+		</div>
+        <div id="red">Add Incidents</div>
+	<div id="black"><body>Interactive online Google Map
+               
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373354.33551868575!2d-81.49681938561949!3d29.611944663385763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e665b99a0e10c3%3A0x4292ff17a4531e43!2sPalatka%2C+FL+32177!5e0!3m2!1sen!2sus!4v1499444673681" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+    
+        
+    </center></div>
+        <div id="blue">
 <?php
 
 /*
@@ -76,7 +94,7 @@ $opts['display'] = array(
 	'form'  => true,
 	'query' => true,
 	'sort'  => true,
-	'time'  => true,
+	'time'  => false,
 	'tabs'  => true
 );
 
@@ -208,7 +226,9 @@ require_once 'phpMyEdit.class.php';
 new phpMyEdit($opts);
 
 ?>
-
-<?php include("includes/footer.php");?>
-</body>
+			
+		</div>
+                
+<?php include('includes/footer.php');?>                
+    </body>
 </html>

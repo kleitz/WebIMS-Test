@@ -17,7 +17,7 @@
 </li>
 <li><a href='#'>Incidents</a>
 	<ul>
-	<li><a href='incident.php'>Incident Manager</a></li>
+	<li><a href='incident_manager.php'>Incident Manager</a></li>
         <li><a href='resources.php'>Available Resources</a></li>
 	<li><a href='#'>Dispached Resources</a></li>
 	
@@ -25,10 +25,10 @@
 </li>
 <li><a href='#'>Maps</a>
 	<ul>
-            <li><a href='gmap.php'>Google Map</a></li>
-	<li><a href='evac.php'>Evacuation Routes</a></li>
-        <li><a href='stormsurge.php'>Storm Surge</a></li>
-        <li><a href='shelter_location.php'>Shelter Locations</a></li>
+            <li></li>
+            <li><a href='evac.php'>Evacuation Routes</a></li>
+            <li><a href='stormsurge.php'>Storm Surge</a></li>
+            <li><a href='shelter_location.php'>Shelter Locations</a></li>
 	</ul>
 </li>
 <li><a href='#'>Files</a>
@@ -39,10 +39,10 @@
 </li>
 <li><a href='#'>Settings</a>
 	<ul>
-	<li><a href='#'>System Edit </a></li>
+        <li><a href='help.php'>Help<a></li>    
 	<li><a href='register.php'>Add User</a></li>
         <li><a href='users.php'>View Users</a></li>
-	</ul>
+        </ul>
 </li>
 </ul>
 </div>
