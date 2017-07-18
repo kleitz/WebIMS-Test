@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-    <?php include("includes/header.php");?>
+ <?php include("includes/header.php");?>   
 <h3>Available Resources</h3>
 <?php
 
@@ -42,7 +42,7 @@
 // MySQL host name, user name, password, database, and table
 $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
-$opts['pw'] = '';
+$opts['pw'] = 'root';
 $opts['db'] = 'webims-1';
 $opts['tb'] = 'resources';
 
@@ -62,7 +62,7 @@ $opts['inc'] = 15;
 // Options you wish to give the users
 // A - add,  C - change, P - copy, V - view, D - delete,
 // F - filter, I - initial sort suppressed
-$opts['options'] = 'ACPVDF';
+$opts['options'] = 'AVF';
 
 // Number of lines to display on multiple selection filters
 $opts['multiple'] = '4';

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>status</title>
+	<title>resources</title>
 <style type="text/css">
 	hr.pme-hr		     { border: 0px solid; padding: 0px; margin: 0px; border-top-width: 1px; height: 1px; }
 	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 100%; }
@@ -19,8 +19,8 @@
 </style>
 </head>
 <body>
-    <?php include("includes/header.php");?>
-<h3>Shelter Status</h3>
+    
+<h3>Available Resources</h3>
 <?php
 
 /*
@@ -42,9 +42,9 @@
 // MySQL host name, user name, password, database, and table
 $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
-$opts['pw'] = '';
+$opts['pw'] = 'root';
 $opts['db'] = 'webims-1';
-$opts['tb'] = 'status';
+$opts['tb'] = 'resources';
 
 // Name of field which is the unique key
 $opts['key'] = 'id';
@@ -142,7 +142,7 @@ appear in generated list. Here are some most used field options documented.
 $opts['fdd']['id'] = array(
   'name'     => 'ID',
   'select'   => 'T',
-  'maxlen'   => 10,
+  'maxlen'   => 11,
   'sort'     => true
 );
 $opts['fdd']['name'] = array(
@@ -151,52 +151,24 @@ $opts['fdd']['name'] = array(
   'maxlen'   => 100,
   'sort'     => true
 );
-$opts['fdd']['status'] = array(
-  'name'     => 'Status',
+$opts['fdd']['type'] = array(
+  'name'     => 'Type',
   'select'   => 'T',
-  'maxlen'   => 50,
+  'maxlen'   => 15,
   'sort'     => true
 );
-$opts['fdd']['adult'] = array(
-  'name'     => 'Adult',
+$opts['fdd']['notes'] = array(
+  'name'     => 'Notes',
   'select'   => 'T',
-  'maxlen'   => 10,
-  'sort'     => true
-);
-$opts['fdd']['children'] = array(
-  'name'     => 'Children',
-  'select'   => 'T',
-  'maxlen'   => 10,
-  'sort'     => true
-);
-$opts['fdd']['leo'] = array(
-  'name'     => 'Leo',
-  'select'   => 'T',
-  'maxlen'   => 10,
-  'sort'     => true
-);
-$opts['fdd']['ems'] = array(
-  'name'     => 'Ems',
-  'select'   => 'T',
-  'maxlen'   => 10,
-  'sort'     => true
-);
-$opts['fdd']['pets'] = array(
-  'name'     => 'Pets',
-  'select'   => 'T',
-  'maxlen'   => 10,
-  'sort'     => true
-);
-$opts['fdd']['date'] = array(
-  'name'     => 'Date',
-  'select'   => 'T',
-  'maxlen'   => 19,
-  'default'  => '0000-00-00 00:00:00',
+  'maxlen'   => 65535,
+  'textarea' => array(
+    'rows' => 5,
+    'cols' => 50),
   'sort'     => true
 );
 
 // Now important call to phpMyEdit
-require_once 'phpMyEdit.class.php';
+require_once '../phpMyEdit.class.php';
 new phpMyEdit($opts);
 
 ?>
@@ -204,4 +176,5 @@ new phpMyEdit($opts);
 <?php include("includes/footer.php");?>
 </body>
 </html>
+
 

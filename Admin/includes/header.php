@@ -2,15 +2,17 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Web Incident Management</title>
+<title>WebIMS Administration</title>
 <meta http-equiv="description" content="page description" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <style type="text/css">@import "styles.css";</style>
 
 </head>
     <body> 
+
 <div id="wrapper">
 <div id="header">
+
 </div> 
 <html>
 <head>
@@ -42,14 +44,14 @@ body {margin:0;}
     color: white;
 }
 </style>
+
 </head>
 <div id="wrapper">
-    <h1><font color ="green"> Web Incident Management System</h1>     
-    <h4>Ham Radio Backup Emergency Communications </h4></font>
-    <p align="right"><a href="logout.php">LogOut</a></p>
-
+    <h1><font color ="green"> WebIMS Administration</h1>     
+            
+    <p align="right"><a href="logout.php">LogOut</a>    </font>    <hr>
 </div>
-    <?php include ('includes/nav.php');?>
+    <!--?php include ('includes/nav.php');?>
 </div>
 </body>
 </html>

@@ -11,16 +11,15 @@
 	<ul>
             <li><a href='shelter_view.php'>Shelter Status</a></li>
             <li> <a href='shelter_add.php'>Shelter Update</a> </li>
-            <li><a href='shelter_edit.php'>Edit Shelter's</a></li>
+            <li></li>
 	<li></li>
 	</ul>
 </li>
 <li><a href='#'>Incidents</a>
 	<ul>
-	<li><a href='incident_manager.php'>Incident Manager</a></li>
+	<li><a href='../WebIMS/Admin/index.php'>Incident Manager</a></li>
         <li><a href='resources.php'>Available Resources</a></li>
-	<li><a href='#'>Dispached Resources</a></li>
-	
+	<li></li>
 	</ul>
 </li>
 <li><a href='#'>Maps</a>
@@ -31,19 +30,31 @@
             <li><a href='shelter_location.php'>Shelter Locations</a></li>
 	</ul>
 </li>
+
+
+<li><a href="#" onClick="window.open('/WebIMS/chat/chat.php','pagename','resizable,height=450,width=850'); 
+    return false;">WebIMS Chat</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="/WebIMS/chat/chat.php" target="_blank">WebIMS</a></noscript> </li>
 <li><a href='#'>Files</a>
 	<ul>
 	<li><a href='document.php'>Documents Manager</a></li>
 	<li><a href='files'>Download Files</a></li>
 	</ul>
 </li>
-<li><a href='#'>Settings</a>
+<li><a href='#'>About</a>
 	<ul>
-        <li><a href='help.php'>Help<a></li>    
-	<li><a href='register.php'>Add User</a></li>
-        <li><a href='users.php'>View Users</a></li>
-        </ul>
+            <li></li>
+            <li><a href='help.php'>Help</a></li> 
+            <li><a href='stormsurge.php'>Storm Surge</a></li>
+            <li><a href='shelter_location.php'>Shelter Locations</a></li>
+	</ul>
 </li>
+<li style="float:right"><a href="/WebIMS/Admin/index.php" target="_blank">Admin</a></li>
+
+</li>
+
+        
 </ul>
 </div>
 </body>

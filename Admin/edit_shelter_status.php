@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-<h3>status</h3>
+<h3>Edit Shelter Status</h3>
 <?php
 
 /*
@@ -41,7 +41,7 @@
 // MySQL host name, user name, password, database, and table
 $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
-$opts['pw'] = '';
+$opts['pw'] = 'root';
 $opts['db'] = 'webims-1';
 $opts['tb'] = 'status';
 
@@ -195,7 +195,7 @@ $opts['fdd']['date'] = array(
 );
 
 // Now important call to phpMyEdit
-require_once 'phpMyEdit.class.php';
+require_once '../phpMyEdit.class.php';
 new phpMyEdit($opts);
 
 ?>
