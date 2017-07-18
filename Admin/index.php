@@ -27,7 +27,7 @@ and open the template in the editor.
         
         <div class="page-header">
      <h3><center><b><?php echo $_SESSION['username']; ?></b>.Welcome To WebIMS.</h3></center>
-     <div id="green"><font color="green">Action Menu
+     <div id="green"><font color="green"><center>Action Menu</center>
 	        
             <li>User Management</li>
         <ul>
@@ -47,16 +47,23 @@ and open the template in the editor.
             <li>Resource Management</li>
             <ul>
             <li><a href="#" onClick="window.open('resources.php','pagename','resizable,height=450,width=850'); 
-    return false;">Available Resources's</a>
+    return false;">Resources's</a>
     <noscript>You need Javascript to use the previous link or use 
-        <a href="resources.php" target="_blank">Edit Shelter's</a></noscript> </li>     
+        <a href="resources.php" target="_blank">Resource's</a></noscript> </li> 
+            <li><a href="#" onClick="window.open('personnel.php','pagename','resizable,height=450,width=850'); 
+    return false;">Personnel</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="personnel.php" target="_blank">Personnel</a></noscript> </li>
             </ul>
-             
+            
+            <li>Utilities</li>
+            <ul>
             <li><a href="#" onClick="window.open('/WebIMS/chat/chat.txt','pagename','resizable,height=450,width=850'); 
     return false;">Save Chat</a>
     <noscript>You need Javascript to use the previous link or use 
         <a href="/WebIMS/chat/chat.txt" target="_blank">WebIMS</a></noscript> </li>           
-        </ul>
+        
+            </ul></ul>
         </font>	
 </div>
        

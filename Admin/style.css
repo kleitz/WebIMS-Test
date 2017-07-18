@@ -14,17 +14,18 @@ and open the template in the editor.
     border: 1px solid green;
     float: left;
     margin: 5px;
+    background:  #dae8e2 
 }
 #red {
     width: 700px;
-    height: 450px;
+    height: 475px;
     border: 1px solid red;
     margin: 5px;
     float: left;
 }
 #black {
     width: 400px;
-    height: 450px;
+    height: 475px;
     border: 1px solid black;
     margin: 5px;
     float: right;
