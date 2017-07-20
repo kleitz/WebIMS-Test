@@ -24,7 +24,7 @@
 </li>
 <li><a href='#'>Maps</a>
 	<ul>
-            <li></li>
+            <li><a href="../WebIMS/maps/index.php">Google Map</a></li>
             <li><a href='evac.php'>Evacuation Routes</a></li>
             <li><a href='stormsurge.php'>Storm Surge</a></li>
             <li><a href='shelter_location.php'>Shelter Locations</a></li>

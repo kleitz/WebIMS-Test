@@ -9,6 +9,11 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 }
 ?>
 <?php include("../Admin/includes/header.php");?>
+<?php   
+ $connect = mysqli_connect("localhost", "root", "root", "webims");  
+ $sql = "SELECT * FROM incident ORDER BY id LIMIT 5";  
+ $result = mysqli_query($connect, $sql);  
+ ?>  
 
 
 <!DOCTYPE html>
@@ -22,6 +27,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>WebIMS Admin</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery.js"></script>  
+           <script src="js/bootstrap.js"></script>  
+           <link href="css/bootstrap.css" rel="stylesheet" />
     </head>
     <body>
         
@@ -37,19 +45,38 @@ and open the template in the editor.
     return false;">Add New User</a>
     <noscript>You need Javascript to use the previous link or use 
         <a href="register.php" target="_blank">Add New User</a></noscript> </li> 
+            
+             <li><a href="#" onClick="window.open('../sms/index.php','pagename','resizable,height=450,width=850'); 
+    return false;">Send SMS Text</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="../sms/index.php" target="_blank">Send SMS Text</a></noscript> </li> 
+            
         </ul> 
             <li>Shelter Management</li> 
+            
             <ul><li><a href="#" onClick="window.open('edit_shelter_status.php','pagename','resizable,height=450,width=850'); 
     return false;">Edit Shelter's</a>
     <noscript>You need Javascript to use the previous link or use 
         <a href="edit_shelter-status.php" target="_blank">Edit Shelter's</a></noscript> </li> 
          </ul>
+            
+            <li>Incident Management</li>
+            <ul>
+                <li><a href="#" onClick="window.open('in_types.php','pagename','resizable,height=450,width=850'); 
+    return false;">Incident Type's</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="in_types.php" target="_blank">Incident Types</a></noscript> </li> 
+                
+                
+                
+            </ul>
             <li>Resource Management</li>
             <ul>
             <li><a href="#" onClick="window.open('resources.php','pagename','resizable,height=450,width=850'); 
     return false;">Resources's</a>
     <noscript>You need Javascript to use the previous link or use 
         <a href="resources.php" target="_blank">Resource's</a></noscript> </li> 
+            
             <li><a href="#" onClick="window.open('personnel.php','pagename','resizable,height=450,width=850'); 
     return false;">Personnel</a>
     <noscript>You need Javascript to use the previous link or use 
@@ -58,22 +85,70 @@ and open the template in the editor.
             
             <li>Utilities</li>
             <ul>
-            <li><a href="#" onClick="window.open('/WebIMS/chat/chat.txt','pagename','resizable,height=450,width=850'); 
+                <li><a href="#" onClick="window.open('facilities.php','pagename','resizable,height=450,width=850'); 
+    return false;">Facilities</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="facilities.php" target="_blank">Facilities</a></noscript> </li> 
+                
+                <li><a href="#" onClick="window.open('documents.php','pagename','resizable,height=450,width=850'); 
+    return false;">Documents</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="documents.php" target="_blank">Documents</a></noscript> </li> 
+                
+                <li><a href="#" onClick="window.open('photos.php','pagename','resizable,height=450,width=850'); 
+    return false;">Photo's</a>
+    <noscript>You need Javascript to use the previous link or use 
+        <a href="photos.php" target="_blank">Photo's</a></noscript> </li> 
+            
+                <li><a href="#" onClick="window.open('/WebIMS/chat/chat.txt','pagename','resizable,height=450,width=850'); 
     return false;">Save Chat</a>
     <noscript>You need Javascript to use the previous link or use 
-        <a href="/WebIMS/chat/chat.txt" target="_blank">WebIMS</a></noscript> </li>           
+        <a href="/WebIMS/chat/chat.txt" target="_blank">Save Chat</a></noscript> </li>           
         
-            </ul></ul>
+            </ul>
         </font>	
 </div>
        
-     <div id="red"><font color="red">Add Tickets
+     <div id="red">
+         <div>
+             
+             <a href="incident_add.php"><button>Create Ticket</button></a>
+             <a href="../maps/index.php" target="_blank"><button>Map Incident</button></a><br>
+             <table border="1">
+                 <thead>
+                     <tr><b><font color='green'>Current Incidents</b></font>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr><div class="container" style="width:500px; border:1px solid #ccc;">  
+                <br />  
+                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">  
+                <?php  
+                     if(mysqli_num_rows($result) > 0)  
+                     {  
+                          while($row = mysqli_fetch_array($result))  
+                          {  
+                               echo '<label><a href="../Admin/incident.php" .'.$row['name'].'" target="_blank">'.$row['name'].'</a></label>';  
+                          }  
+                     }  
+                ?>  
+                </marquee>  
+                     </tr>
+                 </tbody>
+             </table>
+
+         </div>
+         
+         
+         
      
      
      </div></font>
        
-	<div id="black">Map in this section!
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373354.33551868575!2d-81.49681938561949!3d29.611944663385763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e665b99a0e10c3%3A0x4292ff17a4531e43!2sPalatka%2C+FL+32177!5e0!3m2!1sen!2sus!4v1499444673681" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<div id="black">
+            
+            
+  
         </div>
         
         <div id="blue"><h3><font color="blue"> Current Active </h2><br>

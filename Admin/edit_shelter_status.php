@@ -42,7 +42,7 @@
 $opts['hn'] = 'localhost';
 $opts['un'] = 'root';
 $opts['pw'] = 'root';
-$opts['db'] = 'webims-1';
+$opts['db'] = 'webims';
 $opts['tb'] = 'status';
 
 // Name of field which is the unique key

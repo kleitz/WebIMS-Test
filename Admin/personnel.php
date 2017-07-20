@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>personnel</title>
+	<title>Personnel Manager</title>
 <style type="text/css">
 	hr.pme-hr		     { border: 0px solid; padding: 0px; margin: 0px; border-top-width: 1px; height: 1px; }
 	table.pme-main 	     { border: #004d9c 1px solid; border-collapse: collapse; border-spacing: 0px; width: 100%; }
@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-<h3>personnel</h3>
+<h3>Personnel Manager</h3>
 <?php
 
 /*

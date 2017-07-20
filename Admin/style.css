@@ -10,21 +10,21 @@ and open the template in the editor.
 
 #green {
     width: 150px;
-    height: 475px;
+    height: 600px;
     border: 1px solid green;
     float: left;
     margin: 5px;
     background:  #dae8e2 
 }
 #red {
-    width: 700px;
+    width: 600px;
     height: 475px;
     border: 1px solid red;
     margin: 5px;
     float: left;
 }
 #black {
-    width: 400px;
+    width: 450px;
     height: 475px;
     border: 1px solid black;
     margin: 5px;
@@ -37,7 +37,7 @@ and open the template in the editor.
     height: 80px;
     border: 1px solid blue;
     margin: 5px;
-    clear: both;
+    clear: right;
 }
 
 
