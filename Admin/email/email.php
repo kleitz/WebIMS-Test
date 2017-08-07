@@ -8,15 +8,15 @@ $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'n7wwk1@gmail.com';                 // SMTP username
-$mail->Password = '2Cnbj18c';                           // SMTP password
+$mail->Username = 'username@gmail.com';                 // SMTP username
+$mail->Password = 'password';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('Admin@WebIMS.localhost', 'WebIMS');
-$mail->addAddress('n7wwk1@gmail.com', 'WebIMS Email');     // Add a recipient
-$mail->addAddress('3863852664@txt.att.net');               // Name is optional
-$mail->addReplyTo('n7wwk!@outlook.com', 'Information');
+$mail->addAddress('user@gmail.com', 'WebIMS Email');     // Add a recipient
+$mail->addAddress('phone@txt.att.net');               // Name is optional
+$mail->addReplyTo('user@outlook.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
